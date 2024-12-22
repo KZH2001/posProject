@@ -40,7 +40,7 @@
                                 </div>
                             </div>
                             <a href="login.html" class="btn btn-primary btn-user btn-block">
-                                Register Account
+                               Create
                             </a>
                             <hr>
                             <a href="{{ url('auth/google/redirect') }}" class="btn btn-google btn-user btn-block">

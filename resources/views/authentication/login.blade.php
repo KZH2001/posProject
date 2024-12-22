@@ -40,17 +40,18 @@
                                     <a href="index.html" class="btn btn-primary btn-user btn-block">
                                         Login
                                     </a>
+                                </form>
                                     <hr>
-                                    <a href="{{ url('auth/google/redirect') }}" class="btn btn-google btn-user btn-block">
+                                    <a href="{{ url('auth/google/redirect') }}" class="btn btn-google btn-user btn-block rounded-pill">
                                         <i class="fab fa-google fa-fw"></i> Login with Google
                                     </a>
-                                    <a href="{{ url('auth/github/redirect') }}" class="btn btn-github btn-user btn-block">
+                                    <a href="{{ url('auth/github/redirect') }}" class="btn btn-github btn-user btn-block rounded-pill fs-3">
                                         <i class="fab fa-github fa-fw"></i> Login with Github
                                     </a>
-                                </form>
+                          
                                 <hr>
                                 <div class="text-center">
-                                    <a class="small" href="forgot-password.html">Forgot Password?</a>
+                                    <a class="small" href="{{ route('password.request')}}">Forgot Password?</a>
                                 </div>
                                 <div class="text-center">
                                     <a class="small" href="{{ route('register') }}">Create an Account!</a>

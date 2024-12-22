@@ -6,10 +6,14 @@ use Illuminate\Support\Facades\Route;
 
 require_once __DIR__.'/admin.php';
 require_once __DIR__.'/user.php';
+require __DIR__.'/auth.php';
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+Route::redirect('/','login');    
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -21,7 +25,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
 
 //googlekk,github,facebook login
 
@@ -30,3 +33,5 @@ require __DIR__.'/auth.php';
 Route::get('/auth/{provider}/redirect',[SocialLoginController::class,'redirect']);
 
 Route::get('/auth/{provider}/callback',[SocialLoginController::class,'callback']);
+
+
